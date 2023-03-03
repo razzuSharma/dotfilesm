@@ -1,0 +1,86 @@
+##############################################################
+#for integration with mpd
+#
+mpd_port = 6600
+mpd_host = localhost
+mpd_music_dir = "/home/ceaser/music/"
+
+##############################################################
+ # ncmpcpp config
+lyrics_directory = ~/.config/ncmpcpp/lyrics
+ncmpcpp_directory = ~/.config/ncmpcpp
+lyrics_fetchers = musixmatch
+centered_cursor = "yes"
+external_editor = nvim
+
+# Show the "Connected to ..." message on startup
+connected_message_on_startup = no
+
+##############################################################
+#visualizer configs
+## Available values: spectrum, wave, wave_filled, ellipse.
+visualizer_data_source = "/tmp/mpd.fifo"
+visualizer_in_stereo = "yes"
+# visualizer_output_name = "fifo_visualizer"
+visualizer_type        = "ellipse"
+visualizer_look       = ●● 
+visualizer_color      = "3, 7, 5"
+visualizer_fps = 60
+visualizer_autoscale = yes
+#visualizer_look = ●▮
+#visualizer_look = "▒░"
+#visualizer_look = "◈░"
+#visualizer_look = "┃┃"
+#visualizer_look = ●┃
+#visualizer_look = "█┇"
+#visualizer_look = "▒░"
+#visualizer_look = "▋▍"
+#visualizer_look = "▋█"
+#visualizer_look = "▋█"
+#visualizer_look = "▋░"
+#visualizer_look = "▋▓"
+#visualizer_look = "▋☰"
+#visualizer_look = "☰⛆"
+#visualizer_look = "☰▓"
+#visualizer_look = "●▉"
+#visualizer_color = blue, cyan, green, yellow, magenta, red
+##############################################################
+
+##############################################################
+# status bar 
+statusbar_visibility = yes
+statusbar_color = red
+statusbar_time_color = default
+##############################################################
+
+##############################################################
+# user interface
+# autocenter_mode = yes
+# window_border_color = red
+alternative_ui_separator_color = green
+user_interface = alternative
+colors_enabled = yes
+startup_slave_screen = "visualizer"
+startup_screen = playlist
+
+##############################################################
+progressbar_look = "++-"
+progressbar_color = "cyan"
+progressbar_elapsed_color = "blue"
+# progressbar_look = "___"
+# progressbar_look = "─╼ "
+# progressbar_look = "┅┅┄"
+#progressbar_look = "─➞─"
+#progressbar_look = "─┅─"
+#progressbar_look = "▁▁▁"
+# progressbar_look = "≈►·"
+#progressbar_look = "→→"
+
+##############################################################
+#to delete any songs from the playlist/browser
+allow_for_physical_item_deletion = no
+mouse_support = yes
+
+##############################################################
+#for integration with dunst
+execute_on_song_change = notify-send "Now Playing" "$(mpc --format '%title% \n%artist% - %album%' current)"
