@@ -1,0 +1,19 @@
+#!/bin/python
+import os
+import subprocess
+
+url = input('Enter url: ')
+
+
+def main(url):
+    formatted_url = f"'{url}'"
+    music_d = '/home/ceaser/music/'
+    current_d = os.getcwd()
+    if current_d != music_d:
+        os.chdir(music_d)
+        subprocess.call(
+            "yt-dlp -f bestaudio --extract-audio --audio-format m4a -o '%(title)s-%(artist)s.%(ext)s' " + formatted_url, shell=True)
+
+
+if __name__ == "__main__":
+    main(url)
