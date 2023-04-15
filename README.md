@@ -1,2 +1,9 @@
-# dotfiles
-Dotfiles for mpd,ncmpcpp,xinitrc,bashrc ..
+
+# Dotfiles 
+
+- mpd
+- ncmpcpp
+- vim
+- xinitrc
+- scripts for dunst to send notification
+
